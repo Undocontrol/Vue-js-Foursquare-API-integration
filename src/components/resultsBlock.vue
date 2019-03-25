@@ -1,3 +1,7 @@
+<!--
+File Overview:
+* Displays results from API lookups.
+-->
 <template>
   <div class="resultsBlock">
     <h1>Recommended Places</h1>
@@ -13,6 +17,9 @@
             <td>{{ venue.name }}</td>
             <td>{{ venue.location.city}}</td>
             <td>{{ venue.referralId }}</td>
+            <td v-for="category in venue.categories" v-if="category.primary" :key="category.id">
+              <img v-bind:src="category.icon.prefix + '64' + category.icon.suffix" />
+            </td>
           </tr>
         </tbody>
       </table>
@@ -33,6 +40,10 @@ export default {
 <style scoped>
 .resultsBlock {
   text-align: left;
+}
+
+img {
+  background: plum;
 }
 
 h1 {

@@ -51,7 +51,7 @@ export default {
       this.fetchResults(value)
     },
     fetchResults: async function (search) {
-      let results = await api.get('https://api.foursquare.com/v2/venues/search?intent=global&client_id=KF4ZDGTE3ATUTRLW1GXNXK1DFIG0MYQSYBLXXRPK3AZSCVE2&client_secret=EPHEQNNV202AYCZ00TRXIMJGREZLMA3DO3KNJC3A0HXP2C4S&v=20190101&query=' + search)
+      let results = await api.get('https://api.foursquare.com/v2/venues/search?intent=global&client_id=KF4ZDGTE3ATUTRLW1GXNXK1DFIG0MYQSYBLXXRPK3AZSCVE2&client_secret=EPHEQNNV202AYCZ00TRXIMJGREZLMA3DO3KNJC3A0HXP2C4S&v=20190101&categoryId=4d4b7105d754a06376d81259&query=' + search)
       console.log(results);
       this.results = results.response.venues;
     },

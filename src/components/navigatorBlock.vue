@@ -3,12 +3,12 @@
     <div class="introduction">
       <h1>Welcome to your Nightlife Planner</h1>
       <p>Find A Great Night Out!</p>
-      <p>Just enter your destination and click search!</p>
+      <p>Just enter your destination and click Go!</p>
     </div>
     <div class="searchBar">
       <div class="input-group">
-      <input type="text" v-model="search" name="search" placeholder="Enter your location..">
-      <input type="submit" value="Search" class="button">
+      <input type="text" name="search" placeholder="Enter your location..">
+      <input type="submit" value="Go!" class="button">
       </div>
     </div>
   </div>

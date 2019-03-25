@@ -5,16 +5,21 @@ File Overview:
 
 <template>
   <div class="home">
+    <navigatorBlock></navigatorBlock>
+    <resultsBlock></resultsBlock>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
+import navigatorBlock from '@/components/navigatorBlock.vue'
+import resultsBlock from '@/components/resultsBlock.vue'
 
 export default {
   name: 'home',
   components: {
-
+    navigatorBlock,
+    resultsBlock
   },
   data() {
     return {
